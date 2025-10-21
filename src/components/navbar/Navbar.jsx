@@ -1,5 +1,6 @@
 import React from "react";
 import MyLink from "./MyLink";
+import { Link } from "react-router";
 
 const Navbar = () => {
   return (
@@ -31,19 +32,25 @@ const Navbar = () => {
               <MyLink to={"/"}>Home</MyLink>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-4xl">🔥</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <MyLink to={"/"}>Home</MyLink>
-            <MyLink to={"/"}>About Us</MyLink>
-            <MyLink to={"/"}>Profile</MyLink>
+          <ul className="menu menu-horizontal px-1 space-x-3">
+            <MyLink className={"hover:bg-[#090040] py-2 px-4"} to={"/"}>
+              Home
+            </MyLink>
+            <MyLink className={"hover:bg-[#090040] py-2 px-4"} to={"/about"}>
+              About Us
+            </MyLink>
+            <MyLink className={"hover:bg-[#090040] py-2 px-4"} to={"/profile"}>
+              Profile
+            </MyLink>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-[#9112BC] text-white border-none shadow-none">
-            Button
-          </a>
+          <Link to={'/signin'} className="btn bg-[#9112BC] text-white border-none shadow-none">
+            Sign In
+          </Link>
         </div>
       </div>
     </div>
